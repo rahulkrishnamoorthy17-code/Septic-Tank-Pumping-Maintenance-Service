@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4efe6">
+  <meta name="description" content="Sign in to your TankWise demo account or preview account creation. Mobile-friendly front-end demonstration.">
+  <title>Sign In | TankWise Septic Services</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <!-- Base + laptop view, then dedicated tablet and mobile overrides. -->
+  <link rel="stylesheet" href="assets/css/auth-laptop.css">
+  <link rel="stylesheet" href="assets/css/auth-tablet.css" media="(min-width: 601px) and (max-width: 1024px)">
+  <link rel="stylesheet" href="assets/css/auth-mobile.css" media="(max-width: 600px)">
+  <script>
+    // Set preferences before paint to avoid dark/light flash.
+    try {if(localStorage.getItem('tw-dark')==='1')document.documentElement.classList.add('dark');if(localStorage.getItem('tw-rtl')==='1')document.documentElement.dir='rtl';}catch(e){}
+  </script>
+</head>
+<body class="auth-page">
+<a class="skip-link" href="#auth-main">Skip to account form</a>
+<div class="auth-shell">
+  <aside class="auth-showcase" aria-label="TankWise service highlights">
+    <div class="showcase-tint"></div>
+    <div class="showcase-inner">
+      <a class="brand-link showcase-brand" href="index.html" aria-label="TankWise – Go to homepage">
+        <img src="assets/icons/tankwise-brand-mark.svg" width="48" height="48" alt="">
+        <span><strong>TankWise</strong><small>SEPTIC SERVICES</small></span>
+      </a>
+      <div class="showcase-content">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> CLEANER SYSTEMS. SAFER HOMES.</span>
+        <h1>Every service.<br><em>One trusted place.</em></h1>
+        <p>Stay close to your property's septic care with a simple place for service enquiries, maintenance plans and field support.</p>
+        <div class="showcase-points" aria-label="Service benefits">
+          <div class="showcase-point"><span class="point-icon" aria-hidden="true">✓</span><span><strong>Reliable service enquiries</strong><small>Ask about pumping, inspections and maintenance</small></span></div>
+          <div class="showcase-point"><span class="point-icon" aria-hidden="true">✓</span><span><strong>Transparent process</strong><small>Clear steps before your next service visit</small></span></div>
+          <div class="showcase-point"><span class="point-icon" aria-hidden="true">✓</span><span><strong>Local support</strong><small>Coimbatore service coverage and assistance</small></span></div>
+        </div>
+      </div>
+      <div class="showcase-bottom"><span class="status-dot" aria-hidden="true"></span><span>Mechanized septic care, planned with confidence</span></div>
+    </div>
+  </aside>
+
+  <main id="auth-main" class="auth-main">
+    <header class="auth-topbar">
+      <a class="brand-link mobile-brand" href="index.html" aria-label="TankWise – Go to homepage">
+        <img src="assets/icons/tankwise-brand-mark.svg" width="40" height="40" alt="">
+        <span><strong>TankWise</strong><small>SEPTIC SERVICES</small></span>
+      </a>
+      <div class="topbar-actions">
+        <button type="button" class="top-tool" id="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark/light mode" aria-pressed="false"><svg class="theme-svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 16A8 8 0 0 1 8 4a8 8 0 1 0 12 12Z"/></svg></button>
+        <button type="button" class="top-tool rtl-tool" id="direction-toggle" aria-label="Switch to right-to-left layout">RTL</button>
+        <a class="back-link" href="index.html" aria-label="Back to website"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 7-5 5 5 5"/></svg><span>Back to website</span></a>
+      </div>
+    </header>
+
+    <div class="auth-content">
+      <div class="auth-form-area">
+        <div class="auth-intro"><span class="form-kicker">TANKWISE ACCOUNT</span><h2 id="auth-heading">Welcome back</h2><p id="auth-subheading">Sign in to your account to explore TankWise services.</p></div>
+        <div class="auth-tabs" role="tablist" aria-label="Account action">
+          <button type="button" id="signin-tab" class="auth-tab is-active" role="tab" aria-controls="signin-panel" aria-selected="true">Sign In</button>
+          <button type="button" id="signup-tab" class="auth-tab" role="tab" aria-controls="signup-panel" aria-selected="false">Create Account</button>
+        </div>
+        <section id="signin-panel" class="auth-panel" role="tabpanel" aria-labelledby="signin-tab">
+          <form id="signin-form" novalidate>
+            <div class="form-field"><label for="signin-email">Email address <span aria-hidden="true">*</span></label><div class="input-wrap"><svg class="field-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg><input id="signin-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required aria-describedby="signin-email-error"></div><small class="field-error" id="signin-email-error" aria-live="polite"></small></div>
+            <div class="form-field"><div class="field-header"><label for="signin-password">Password <span aria-hidden="true">*</span></label><button class="text-action" type="button" id="forgot-password">Forgot password?</button></div><div class="input-wrap"><svg class="field-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><input id="signin-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required aria-describedby="signin-password-error"><button class="pw-toggle" type="button" data-toggle-password="signin-password" aria-label="Show password">Show</button></div><small class="field-error" id="signin-password-error" aria-live="polite"></small></div>
+            <label class="check-line"><input type="checkbox" id="remember-me" checked><span>Remember me on this device</span></label>
+            <button class="primary-action" type="submit">Sign In <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+          </form>
+          <p class="auth-switch-copy">New to TankWise? <button type="button" class="text-action" data-switch="signup">Create an account</button></p>
+        </section>
+        <section id="signup-panel" class="auth-panel" role="tabpanel" aria-labelledby="signup-tab" hidden>
+          <form id="signup-form" novalidate>
+            <div class="form-field"><label for="signup-name">Full name <span aria-hidden="true">*</span></label><div class="input-wrap"><input id="signup-name" name="name" type="text" autocomplete="name" placeholder="Your full name" minlength="2" required aria-describedby="signup-name-error"></div><small class="field-error" id="signup-name-error" aria-live="polite"></small></div>
+            <div class="form-field"><label for="signup-email">Email address <span aria-hidden="true">*</span></label><div class="input-wrap"><input id="signup-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required aria-describedby="signup-email-error"></div><small class="field-error" id="signup-email-error" aria-live="polite"></small></div>
+            <div class="form-field"><label for="signup-phone">Phone number <span aria-hidden="true">*</span></label><div class="input-wrap"><span class="phone-code">+91</span><input id="signup-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="10" placeholder="10-digit mobile number" required aria-describedby="signup-phone-error"></div><small class="field-error" id="signup-phone-error" aria-live="polite"></small></div>
+            <div class="field-pair"><div class="form-field"><label for="signup-password">Password <span aria-hidden="true">*</span></label><div class="input-wrap"><input id="signup-password" name="password" type="password" autocomplete="new-password" placeholder="8+ characters" required aria-describedby="signup-password-error"><button class="pw-toggle" type="button" data-toggle-password="signup-password" aria-label="Show password">Show</button></div><small class="field-error" id="signup-password-error" aria-live="polite"></small></div><div class="form-field"><label for="signup-confirm">Confirm password <span aria-hidden="true">*</span></label><div class="input-wrap"><input id="signup-confirm" name="confirm" type="password" autocomplete="new-password" placeholder="Repeat password" required aria-describedby="signup-confirm-error"><button class="pw-toggle" type="button" data-toggle-password="signup-confirm" aria-label="Show password">Show</button></div><small class="field-error" id="signup-confirm-error" aria-live="polite"></small></div></div>
+            <label class="check-line"><input type="checkbox" id="signup-consent"><span>I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</span></label><small class="field-error" id="signup-consent-error" aria-live="polite"></small>
+            <button class="primary-action" type="submit">Create Account <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+          </form>
+          <p class="auth-switch-copy">Already registered? <button type="button" class="text-action" data-switch="signin">Sign In</button></p>
+        </section>
+        <div class="social-divider"><span>or continue with</span></div>
+        <div class="social-actions"><button type="button" id="google-demo" class="social-button" aria-label="Google sign-in demo"><svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg><span>Google</span></button><button type="button" id="apple-demo" class="social-button" aria-label="Apple sign-in demo"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.38c.62-.75 1.04-1.8.93-2.85-.9.04-2 .6-2.65 1.35-.58.66-1.09 1.74-.96 2.76 1.02.08 2.06-.51 2.68-1.26z"/></svg><span>Apple</span></button></div>
+        <p class="demo-note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 11v6m0-10h.01"/></svg><span>Front-end demo only. No secure authentication or real Google/Apple sign-in is connected. Passwords are not saved.</span></p>
+      </div>
+    </div>
+    <p class="auth-bottom">© <span id="auth-year"></span> TankWise Septic Services <span aria-hidden="true">·</span> <a href="privacy.html">Privacy</a> <span aria-hidden="true">·</span> <a href="terms.html">Terms</a></p>
+  </main>
+</div>
+<div id="auth-notice" class="auth-notice" role="status" aria-live="polite" aria-atomic="true" hidden><div class="notice-mark" aria-hidden="true">✓</div><div class="notice-copy"><strong id="notice-title">Message</strong><span id="notice-description"></span></div><button type="button" id="notice-close" aria-label="Close message">×</button></div>
+<script>
+(()=>{'use strict';
+  const doc=document.documentElement;
+  const $=(s,ctx=document)=>ctx.querySelector(s);
+  const EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  const key='tw_auth_user';
+  const STORE={get(k){try{return localStorage.getItem(k)}catch{return null}},set(k,v){try{localStorage.setItem(k,v)}catch{}}};
+  function appearance(){const dark=doc.classList.contains('dark'),rtl=doc.dir==='rtl';$('#theme-toggle').setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');$('#theme-toggle').setAttribute('aria-pressed',String(dark));$('#theme-toggle svg').innerHTML=dark?'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4 4l2 2m12 12 2 2M4 20l2-2m12-12 2-2"/>':'<path d="M20 16A8 8 0 0 1 8 4a8 8 0 1 0 12 12Z"/>';$('#direction-toggle').textContent=rtl?'LTR':'RTL';$('#direction-toggle').setAttribute('aria-label',rtl?'Switch to left-to-right layout':'Switch to right-to-left layout');}
+  $('#theme-toggle').addEventListener('click',()=>{doc.classList.toggle('dark');STORE.set('tw-dark',doc.classList.contains('dark')?'1':'0');appearance()});
+  $('#direction-toggle').addEventListener('click',()=>{doc.dir=doc.dir==='rtl'?'ltr':'rtl';STORE.set('tw-rtl',doc.dir==='rtl'?'1':'0');appearance()});
+  appearance();$('#auth-year').textContent=String(new Date().getFullYear());
+  function notify(title,message){$('#notice-title').textContent=title;$('#notice-description').textContent=message;$('#auth-notice').hidden=false;$('#notice-close').focus();}
+  $('#notice-close').addEventListener('click',()=>{$('#auth-notice').hidden=true;const active=$('.auth-tab.is-active');active?.focus()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#auth-notice').hidden){$('#auth-notice').hidden=true}});
+  function switchTo(name){const signing=name==='signin';for(const n of ['signin','signup']){const tab=$('#'+n+'-tab'),panel=$('#'+n+'-panel');const enabled=(n===name);tab.classList.toggle('is-active',enabled);tab.setAttribute('aria-selected',String(enabled));tab.tabIndex=enabled?0:-1;panel.hidden=!enabled;}
+    $('#auth-heading').textContent=signing?'Welcome back':'Create your account';$('#auth-subheading').textContent=signing?'Sign in to your account to explore TankWise services.':'Start with a few details to create a demo account.';
+    document.title=(signing?'Sign In':'Create Account')+' | TankWise Septic Services';const tab=$('#'+name+'-tab');tab.focus();
+  }
+  $('#signin-tab').addEventListener('click',()=>switchTo('signin'));$('#signup-tab').addEventListener('click',()=>switchTo('signup'));
+  document.querySelectorAll('[data-switch]').forEach(el=>el.addEventListener('click',()=>switchTo(el.dataset.switch)));
+  document.querySelector('.auth-tabs').addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();let target=e.key==='Home'?'signin':e.key==='End'?'signup':$('#signin-tab').classList.contains('is-active')?'signup':'signin';switchTo(target)});
+  function err(id,text){const el=$('#'+id),note=$('#'+id+'-error');if(!el)return false;el.setAttribute('aria-invalid',text?'true':'false');if(note)note.textContent=text;return !!text;}
+  document.querySelectorAll('input').forEach(el=>el.addEventListener('input',()=>err(el.id,'')));
+  function validateEmail(id){const el=$('#'+id),value=el.value.trim().toLowerCase();el.value=value;return err(id,EMAIL.test(value)?'':'Enter a valid email address.')}
+  function saveDemoUser(user){STORE.set(key,JSON.stringify({...user,provider:'Email demo',loginTime:new Date().toISOString()}))}
+  $('#signin-form').addEventListener('submit',e=>{e.preventDefault();const email=$('#signin-email').value.trim().toLowerCase(),password=$('#signin-password').value;const a=validateEmail('signin-email'),b=err('signin-password',password.length>=6?'':'Enter a password of at least 6 characters.');if(a||b){(a?$('#signin-email'):$('#signin-password')).focus();return}
+    const displayName=email.split('@')[0].replace(/[._-]/g,' ').replace(/\b\w/g,c=>c.toUpperCase()).slice(0,70)||'Member';saveDemoUser({name:displayName,email});$('#signin-password').value='';notify('Demo sign-in successful','Account preview is active in this browser. This is not a real authenticated session.');
+  });
+  $('#signup-phone').addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,10)});
+  $('#signup-form').addEventListener('submit',e=>{e.preventDefault();const name=$('#signup-name').value.trim(),email=$('#signup-email').value.trim().toLowerCase(),phone=$('#signup-phone').value.trim(),pw=$('#signup-password').value,confirm=$('#signup-confirm').value;
+    const bad=[err('signup-name',name.length>=2&&/^[\p{L}][\p{L}\p{M} .'-]{1,79}$/u.test(name)?'':'Enter a valid name using letters (at least 2 characters).'),validateEmail('signup-email'),err('signup-phone',/^\d{10}$/.test(phone)?'':'Enter a valid 10-digit phone number.'),err('signup-password',pw.length>=8?'':'Use at least 8 characters.'),err('signup-confirm',confirm===pw&&confirm.length>0?'':'Passwords do not match.'),!$('#signup-consent').checked];$('#signup-consent-error').textContent=bad[5]?'Please agree to the terms before continuing.':'';const ids=['signup-name','signup-email','signup-phone','signup-password','signup-confirm','signup-consent'];if(bad.some(Boolean)){const id=ids[bad.findIndex(Boolean)];$('#'+id).focus();return}
+    saveDemoUser({name,email,phone});$('#signup-password').value='';$('#signup-confirm').value='';notify('Demo account created','Your account preview is ready in this browser. No real account has been created.');
+  });
+  document.querySelectorAll('[data-toggle-password]').forEach(btn=>btn.addEventListener('click',()=>{const field=$('#'+btn.dataset.togglePassword),visible=field.type==='password';field.type=visible?'text':'password';btn.textContent=visible?'Hide':'Show';btn.setAttribute('aria-label',visible?'Hide password':'Show password')}));
+  $('#forgot-password').addEventListener('click',()=>notify('Password reset preview','This is a front-end demo. Connect a real authentication service to email password reset links.'));
+  for(const provider of ['google','apple'])$('#'+provider+'-demo').addEventListener('click',()=>notify(provider==='google'?'Google sign-in preview':'Apple sign-in preview','OAuth is not connected in this static HTML template. Configure your provider before enabling live sign-in.'));
+  if(new URLSearchParams(location.search).get('mode')==='signup')switchTo('signup');
+})();
+</script>
+</body>
+</html>

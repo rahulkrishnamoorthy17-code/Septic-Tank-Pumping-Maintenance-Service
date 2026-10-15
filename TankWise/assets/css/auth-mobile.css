@@ -1,0 +1,23 @@
+/* TankWise dedicated mobile layouts: 320px–600px. */
+@media (max-width:600px){
+  .auth-shell{display:block;min-height:100dvh;overflow:visible}
+  .auth-showcase{display:none}
+  .auth-main{min-height:100vh;min-height:100dvh}
+  .auth-topbar{min-height:auto;display:flex;justify-content:space-between;align-items:center;padding:17px 20px 10px;gap:10px}
+  .mobile-brand{display:inline-flex;gap:8px}.mobile-brand img{width:39px;height:39px}.mobile-brand strong{font-size:21px}.mobile-brand small{font-size:8px;letter-spacing:1.65px;margin-top:3px}
+  .topbar-actions{gap:7px}.top-tool{width:36px;height:36px;border-radius:10px}.rtl-tool{width:42px;font-size:11px}.back-link{margin:0;border:1px solid var(--auth-line);width:36px;height:36px;border-radius:10px;justify-content:center;background:var(--auth-card)}.back-link span{display:none}
+  .auth-content{align-items:flex-start;padding:31px 22px 26px;flex:1}
+  .auth-form-area{max-width:none}.auth-intro{margin-bottom:24px}.auth-intro h2{font-size:clamp(29px,7vw,39px);letter-spacing:-.9px}.auth-intro p{font-size:12px}.form-kicker{font-size:10px}
+  .auth-tabs{margin-bottom:23px}.auth-tab{min-height:44px;font-size:12px}
+  .form-field{margin-bottom:17px}.form-field label,.field-header{font-size:12px}.input-wrap,.input-wrap input{min-height:51px;height:51px}
+  .field-pair{grid-template-columns:1fr;gap:0}.check-line{font-size:11px}
+  .primary-action{min-height:52px}.social-divider{margin:21px 0 16px}
+  .demo-note{margin-top:18px}.auth-bottom{padding:16px 17px 20px;font-size:10px}
+  .auth-notice{inset-block-start:15px;inset-inline-start:15px;inset-inline-end:15px;max-width:none}
+}
+@media (max-width:359px){
+  .auth-topbar{padding-inline:14px}.auth-content{padding-inline:16px}
+  .mobile-brand strong{font-size:19px}.mobile-brand img{width:35px;height:35px}
+  .topbar-actions{gap:4px}.top-tool{width:32px;height:34px}.rtl-tool{width:38px}.back-link{width:32px;height:34px}
+  .social-button{gap:6px;font-size:12px}.form-field{margin-bottom:14px}
+}
