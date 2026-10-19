@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maintenance Guide | TankWise Septic Services</title>
+<meta name="description" content="Practical septic maintenance guide for homeowners: prevention, pumping, inspection and seasonal care.">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Outfit:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="assets/css/bundle-services.css">
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/guide-details.js" defer></script>
+<style>
+/* Only new guide details page; existing website elements untouched. */
+.guide-reader { max-width: 900px; margin-inline: auto; }
+.guide-reader .guide-return { display:inline-flex; align-items:center; color:#f2bc8b; text-decoration:underline; text-underline-offset:5px; font-weight:700; margin-bottom: 20px; }
+.guide-reader .guide-photo { width:100%; height:clamp(220px,35vw,390px); object-fit:cover; border-radius:14px; display:block; border:1px solid var(--line); }
+.guide-reader .guide-section { margin-top:clamp(28px,4vw,42px); }
+.guide-reader .guide-section h2 { margin-bottom:12px; }
+.guide-reader .guide-section p { line-height:1.85; max-width: 76ch; }
+.guide-reader .guide-checklist { padding:clamp(20px,4vw,32px); margin-top:35px; }
+.guide-reader .guide-checklist li { margin-bottom:12px; line-height:1.65; }
+.guide-reader .guide-notice { padding:20px 24px; margin-top:24px; border-left:4px solid var(--copper); background:var(--card); border-radius:8px; line-height:1.7; }
+.guide-reader .guide-actions { margin-top:36px; display:flex; gap:12px; flex-wrap:wrap; }
+</style>
+</head>
+<body>
+<div data-header></div>
+<main id="main-content">
+<section class="page-hero">
+<div class="container guide-reader">
+<a class="guide-return" href="maintenance-guide.html">← Back to maintenance guides</a>
+<span class="section-kicker" id="guide-category">Maintenance / field notes</span>
+<h1 id="guide-title">Septic maintenance guide</h1>
+<p class="lead" id="guide-intro">Practical advice for homeowners.</p>
+</div>
+</section>
+<section class="section paper">
+<div class="container guide-reader">
+<img class="guide-photo" id="guide-image" src="assets/images/guide-frequency.jpg" alt="Septic maintenance guide illustration" loading="eager">
+<article id="guide-content" aria-label="Maintenance guide article"></article>
+<div class="card guide-checklist">
+<h2>Homeowner checklist</h2>
+<ul id="guide-checklist"></ul>
+</div>
+<p class="guide-notice" id="guide-safety" role="note"></p>
+<div class="guide-actions">
+<a class="btn" href="contact.html">Ask our team</a>
+<a href="maintenance-guide.html" class="btn btn-ghost">All maintenance guides</a>
+</div>
+</div>
+</section>
+</main>
+<div data-footer></div>
+</body>
+</html>
